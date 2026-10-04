@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Irkutsk dashboard — 4 Oct 10:40 EDT</title>
+<style>
+  :root { --bg:#0c1117; --panel:#161e29; --line:#2a3648; --text:#e8eef6; --muted:#8ea0b5; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:"Segoe UI",system-ui,sans-serif; background:var(--bg); color:var(--text); }
+  .wrap { max-width:1120px; margin:0 auto; padding:24px; }
+  h1 { margin:0 0 4px; font-size:1.45rem; }
+  .sub { color:var(--muted); margin-bottom:16px; }
+  .kpis { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-bottom:14px; }
+  .kpi { background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:14px 16px; }
+  .kpi .n { font-size:1.4rem; font-weight:700; }
+  .kpi .l { color:var(--muted); font-size:.8rem; }
+  .grid { display:grid; grid-template-columns:1.2fr .9fr; gap:12px; }
+  .panel { background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:14px 16px; }
+  h2 { margin:0 0 10px; font-size:1rem; }
+  table { width:100%; border-collapse:collapse; }
+  th,td { text-align:left; padding:8px 6px; border-bottom:1px solid var(--line); font-size:.9rem; }
+  th { color:var(--muted); font-size:.72rem; text-transform:uppercase; }
+  .tag { font-size:.74rem; padding:2px 7px; border-radius:99px; }
+  .out { background:#3d1c18; color:#ffb4a2; }
+  .low { background:#3a2a16; color:#ffd6a5; }
+  .watch { background:#3a3416; color:#ffe08a; }
+  .ok { background:#16332f; color:#b7f0e6; }
+  ul { margin:0; padding-left:18px; color:var(--muted); }
+  li { margin:6px 0; }
+  li b { color:var(--text); }
+  footer { color:var(--muted); font-size:.78rem; margin-top:12px; }
+  @media (max-width:800px) { .kpis,.grid { grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Irkutsk antibiotic dashboard</h1>
+  <div class="sub">Refreshed 4 October 2026, 10:40 EDT. No new shelf survey. Epi line expanded by the Rospotrebnadzor briefing.</div>
+  <section class="kpis">
+    <div class="kpi"><div class="n">0</div><div class="l">Confirmed plague secondary cases</div></div>
+    <div class="kpi"><div class="n">2 + 2</div><div class="l">COVID-19 and rhinovirus among contacts</div></div>
+    <div class="kpi"><div class="n">Stable</div><div class="l">Official status, Irkutsk and Shelekhov</div></div>
+    <div class="kpi"><div class="n">5 Oct</div><div class="l">Cited pharmacy restock, still unverified</div></div>
+  </section>
+  <div class="grid">
+    <section class="panel">
+      <h2>Retail pressure — carried from 3 Oct</h2>
+      <table>
+        <thead><tr><th>Drug</th><th>Irkutsk</th><th>Shelekhov</th><th>Now</th></tr></thead>
+        <tbody>
+          <tr><td>Doxycycline</td><td><span class="tag low">Few / Rx</span></td><td><span class="tag out">≤2 or out</span></td><td>No 4 Oct check</td></tr>
+          <tr><td>Ciprofloxacin</td><td><span class="tag low">Low / order</span></td><td><span class="tag out">Sold out</span></td><td>Window opens 5 Oct</td></tr>
+          <tr><td>Levofloxacin</td><td><span class="tag low">Limited</span></td><td><span class="tag out">≤2 or out</span></td><td>No 4 Oct check</td></tr>
+          <tr><td>Gentamicin</td><td><span class="tag low">Rx / few</span></td><td><span class="tag out">≤2 or out</span></td><td>No 4 Oct check</td></tr>
+          <tr><td>Moxifloxacin</td><td><span class="tag low">Limited</span></td><td><span class="tag out">Limited / out</span></td><td>No 4 Oct check</td></tr>
+          <tr><td>Streptomycin</td><td><span class="tag watch">Not reported</span></td><td><span class="tag watch">Not reported</span></td><td>Baseline scarcity</td></tr>
+        </tbody>
+      </table>
+    </section>
+    <section class="panel">
+      <h2>What changed since morning</h2>
+      <ul>
+        <li><b>Labs</b> — expanded tests found no work-related pathogens in the patient’s material</li>
+        <li><b>Institute</b> — no pathogen-handling accident found; expert commission sent by the Rospotrebnadzor chief agreed</li>
+        <li><b>Staff</b> — no infectious-disease reports among institute employees in the prior 10 days</li>
+        <li><b>Contacts</b> — daily labs while observed: 2 COVID-19, 2 rhinovirus, no other pathogens reported</li>
+        <li><b>Diagnosis</b> — still “pneumonia of unspecified etiology”</li>
+        <li><b>Measures</b> — mask rule at IrkAZ still described as preventive; hospital quarantines remain a media report</li>
+      </ul>
+    </section>
+  </div>
+  <footer>Sources for the new line: Vedomosti and OGIRK citing Rospotrebnadzor, 4 Oct. Pharmacy rows remain the 3 Oct People of Baikal checks. Media plague account and the official pneumonia wording still diverge. Zero confirmed secondary plague cases.</footer>
+</div>
+</body>
+</html>
